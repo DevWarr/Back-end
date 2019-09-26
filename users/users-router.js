@@ -68,7 +68,7 @@ router.put('/:id', restricted, validateUserId, (req, res) => {
 });
 
 // get templates for user specified by id
-router.get('/:id/templates', restricted, validateUserId, (req, res) => {
+router.get('/:id/templates', (req, res) => {
     const { id } = req.params;
     User.getUserTemplates(id)
         .then(templates => {

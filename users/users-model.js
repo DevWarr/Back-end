@@ -26,7 +26,7 @@ function getById(id) {
 
 async function insert(user) {
     console.log("in here?")
-    const [id] = await db('users').insert(user, 'id');
+    const [id] = await db('users').insert(user);
     return getById(id);
 }
 
